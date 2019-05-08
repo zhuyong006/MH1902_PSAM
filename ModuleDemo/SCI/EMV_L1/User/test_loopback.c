@@ -13,7 +13,7 @@ static ST_APDU_RSP apdu_rsp;
 extern struct emv_core emv_devs[];
 
 
-int32_t PsamColdRest(uint32_t u32Slot)
+int32_t PsamRest(uint32_t u32Slot)
 {
     int32_t s32Slot, state;
 	  int i = 0;
@@ -68,7 +68,13 @@ int32_t PsamColdRest(uint32_t u32Slot)
 					DBG_PRINT("0x%02x,",atr_buf[i+1]);
     }
 		DBG_PRINT("\n");
-
+		
+		emv_hard_warm_reset( pdev );/*warm reset.*/
+		if( 0 == ( state = emv_atr_analyser( pdev, &su_atr, atr_buf ) ) )
+    {
+        state = emv_atr_parse( pdev, &su_atr );
+    }
+		
     return 0;
 }
 
@@ -300,7 +306,7 @@ LOOP:
 				if ('r' == s32Command)
 				{
 						DBG_PRINT("iso7816 reset card\n");
-						PsamColdRest(u8Slot);
+						PsamRest(u8Slot);
 				}else if('c' == s32Command){
 					  DBG_PRINT("ISO7816 Read Rand Parm\n");
 						ReadRandParm(u8Slot);

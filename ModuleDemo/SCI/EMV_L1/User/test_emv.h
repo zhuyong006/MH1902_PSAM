@@ -19,7 +19,7 @@
 
     
     void loop_back(uint8_t u8Slot);
-		int32_t PsamColdRest(uint32_t u32Slot);
+		int32_t PsamRest(uint32_t u32Slot);
     void print_hex(char *s, uint8_t  *buf, int len);
     void delay_Ms(uint32_t u32Us);
     void wait_Ns(uint8_t u8N);

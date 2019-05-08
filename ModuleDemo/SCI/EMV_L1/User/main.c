@@ -45,8 +45,6 @@ extern RNG_BUF_ID  spi_RecvBuf;
 
 int main(int argc, char *argv[])
 {
-    uint32_t u32Ms;
-    uint8_t  au8Ver[32];
 
     
     //Enable clock SCI0, SCI1, SCI2, UART0, and GPIO.
