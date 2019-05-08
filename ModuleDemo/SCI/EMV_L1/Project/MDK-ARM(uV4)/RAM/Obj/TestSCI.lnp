@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+".\ram\obj\main.o"
+".\ram\obj\uart.o"
+".\ram\obj\test_emv.o"
+".\ram\obj\test_loopback.o"
+".\ram\obj\startup_mhscpu.o"
+".\ram\obj\misc.o"
+".\ram\obj\mhscpu_uart.o"
+".\ram\obj\mhscpu_sysctrl.o"
+".\ram\obj\mhscpu_gpio.o"
+".\ram\obj\mhscpu_emv_hard.o"
+".\ram\obj\system_mhscpu.o"
+"..\..\..\..\..\Libraries\MHSCPU_Driver\lib\mh1902_emv.lib"
+--library_type=microlib --strict --scatter ".\RAM\Obj\TestSCI.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\RAM\List\TestSCI.map" -o .\RAM\Obj\TestSCI.axf

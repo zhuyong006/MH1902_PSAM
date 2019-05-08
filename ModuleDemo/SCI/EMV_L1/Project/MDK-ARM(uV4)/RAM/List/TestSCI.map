@@ -1,0 +1,1073 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text) refers to misc.o(.text) for NVIC_Init
+    main.o(.text) refers to mhscpu_sysctrl.o(.text) for SYSCTRL_APBPeriphClockCmd
+    main.o(.text) refers to uart.o(.text) for uart_Config
+    main.o(.text) refers to mhscpu_gpio.o(.text) for GPIO_PinRemapConfig
+    main.o(.text) refers to mhscpu_emv_hard.o(.text) for SCI_ConfigEMV
+    main.o(.text) refers to printf8.o(i.__0printf$8) for __2printf
+    main.o(.text) refers to iso7816_3.o(i.iso7816_get_version) for iso7816_get_version
+    main.o(.text) refers to iso7816_3.o(i.iso7816_lib_date) for iso7816_lib_date
+    main.o(.text) refers to iso7816_3.o(i.iso7816_lib_time) for iso7816_lib_time
+    main.o(.text) refers to test_loopback.o(.text) for loop_back
+    uart.o(.text) refers to mhscpu_gpio.o(.text) for GPIO_Init
+    uart.o(.text) refers to uart.o(.data) for uart_dll
+    uart.o(.text) refers to uart.o(.bss) for au8SendBuff
+    test_emv.o(.text) refers to printf8.o(i.__0printf$8) for __2printf
+    test_emv.o(.text) refers to uart.o(.text) for uart_RecvChar
+    test_emv.o(.text) refers to test_emv.o(.constdata) for aTIM_IRQn
+    test_emv.o(.text) refers to test_emv.o(.conststring) for .conststring
+    test_loopback.o(.text) refers to memseta.o(.text) for __aeabi_memclr4
+    test_loopback.o(.text) refers to printf8.o(i.__0printf$8) for __2printf
+    test_loopback.o(.text) refers to mhscpu_emv_hard.o(.text) for select_slot
+    test_loopback.o(.text) refers to emv_core.o(i.emv_atr_analyser) for emv_atr_analyser
+    test_loopback.o(.text) refers to iso7816_3.o(i.iso7816_exchange) for iso7816_exchange
+    test_loopback.o(.text) refers to uart.o(.text) for uart_RecvChar
+    test_loopback.o(.text) refers to test_emv.o(.text) for wait_ChangeNs
+    test_loopback.o(.text) refers to iso7816_3.o(i.iso7816_device_init) for iso7816_device_init
+    test_loopback.o(.text) refers to iso7816_3.o(i.iso7816_detect) for iso7816_detect
+    test_loopback.o(.text) refers to iso7816_3.o(i.iso7816_init) for iso7816_init
+    test_loopback.o(.text) refers to test_loopback.o(.bss) for atr_buf
+    test_loopback.o(.text) refers to iso7816_3.o(.bss) for emv_devs
+    startup_mhscpu.o(RESET) refers to startup_mhscpu.o(STACK) for __initial_sp
+    startup_mhscpu.o(RESET) refers to startup_mhscpu.o(.text) for Reset_Handler
+    startup_mhscpu.o(RESET) refers to mhscpu_emv_hard.o(.text) for SCI0_IRQHandler
+    startup_mhscpu.o(RESET) refers to uart.o(.text) for UART0_IRQHandler
+    startup_mhscpu.o(.text) refers to startup_mhscpu.o(RESET) for __Vectors
+    startup_mhscpu.o(.text) refers to system_mhscpu.o(.text) for SystemInit
+    startup_mhscpu.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    misc.o(.text) refers to main.o(.text) for assert_failed
+    mhscpu_uart.o(.text) refers to mhscpu_sysctrl.o(.text) for SYSCTRL_UART_Reset
+    mhscpu_uart.o(.text) refers to main.o(.text) for assert_failed
+    mhscpu_sysctrl.o(.text) refers to main.o(.text) for assert_failed
+    mhscpu_sysctrl.o(.text) refers to mhscpu_sysctrl.o(.emb_text) for __asm___16_mhscpu_sysctrl_c_220ebcab__SYSCTRL_Sleep
+    mhscpu_gpio.o(.text) refers to main.o(.text) for assert_failed
+    mhscpu_gpio.o(.text) refers to mhscpu_sysctrl.o(.text) for SYSCTRL_APBPeriphResetCmd
+    mhscpu_gpio.o(.text) refers to mhscpu_gpio.o(.constdata) for .constdata
+    mhscpu_gpio.o(.text) refers to mhscpu_gpio.o(.data) for GPIO_OD_Mark
+    mhscpu_emv_hard.o(.text) refers to emv_queue.o(i.emv_queue_flush) for emv_queue_flush
+    mhscpu_emv_hard.o(.text) refers to mhscpu_emv_hard.o(.bss) for scs_queue
+    mhscpu_emv_hard.o(.text) refers to mhscpu_emv_hard.o(.constdata) for aSCI_CG_Table
+    mhscpu_emv_hard.o(.text) refers to emv_queue.o(i.emv_core_init) for emv_core_init
+    mhscpu_emv_hard.o(.text) refers to mhscpu_emv_hard.o(.data) for gu32Di
+    system_mhscpu.o(.text) refers to mhscpu_sysctrl.o(.text) for SYSCTRL_PLLConfig
+    system_mhscpu.o(.text) refers to system_mhscpu.o(.data) for SystemCoreClock
+    emv_core.o(i.emv_atr_analyser) refers to memseta.o(.text) for __aeabi_memclr
+    emv_core.o(i.emv_atr_analyser) refers to emv_queue.o(i.emv_queue_spill) for emv_queue_spill
+    emv_core.o(i.emv_atr_analyser) refers to memcpya.o(.text) for __aeabi_memcpy
+    emv_core.o(i.emv_atr_parse) refers to emv_fidi_table.o(i.fi_const_table) for fi_const_table
+    emv_core.o(i.emv_atr_parse) refers to emv_fidi_table.o(i.di_const_table) for di_const_table
+    emv_core.o(i.emv_t0_exchange) refers to emv_core.o(i.emv_tell_case) for emv_tell_case
+    emv_core.o(i.emv_t0_exchange) refers to emv_queue.o(i.emv_queue_flush) for emv_queue_flush
+    emv_core.o(i.emv_t0_exchange) refers to emv_queue.o(i.emv_queue_fill) for emv_queue_fill
+    emv_core.o(i.emv_t0_exchange) refers to mhscpu_emv_hard.o(.text) for emv_hard_xmit
+    emv_core.o(i.emv_t0_exchange) refers to emv_queue.o(i.emv_queue_spill) for emv_queue_spill
+    emv_core.o(i.emv_t1_block_recv) refers to memseta.o(.text) for __aeabi_memclr
+    emv_core.o(i.emv_t1_block_recv) refers to emv_queue.o(i.emv_queue_spill) for emv_queue_spill
+    emv_core.o(i.emv_t1_block_recv) refers to emv_core.o(i.emv_t1_compute_lrc) for emv_t1_compute_lrc
+    emv_core.o(i.emv_t1_block_xmit) refers to emv_queue.o(i.emv_queue_flush) for emv_queue_flush
+    emv_core.o(i.emv_t1_block_xmit) refers to emv_core.o(i.emv_t1_compute_lrc) for emv_t1_compute_lrc
+    emv_core.o(i.emv_t1_block_xmit) refers to emv_queue.o(i.emv_queue_fill) for emv_queue_fill
+    emv_core.o(i.emv_t1_block_xmit) refers to mhscpu_emv_hard.o(.text) for emv_hard_xmit
+    emv_core.o(i.emv_t1_exchange) refers to emv_core.o(i.emv_t1_extract) for emv_t1_extract
+    emv_core.o(i.emv_t1_exchange) refers to emv_core.o(i.emv_t1_iblock_pack) for emv_t1_iblock_pack
+    emv_core.o(i.emv_t1_exchange) refers to mhscpu_emv_hard.o(.text) for emv_hard_power_dump
+    emv_core.o(i.emv_t1_exchange) refers to emv_core.o(i.emv_t1_block_xmit) for emv_t1_block_xmit
+    emv_core.o(i.emv_t1_exchange) refers to emv_core.o(i.emv_t1_block_recv) for emv_t1_block_recv
+    emv_core.o(i.emv_t1_exchange) refers to memcpya.o(.text) for __aeabi_memcpy
+    emv_core.o(i.emv_t1_extract) refers to emv_core.o(i.emv_tell_case) for emv_tell_case
+    emv_core.o(i.emv_t1_extract) refers to memcpya.o(.text) for __aeabi_memcpy
+    emv_core.o(i.emv_t1_iblock_pack) refers to memcpya.o(.text) for __aeabi_memcpy
+    emv_core.o(i.emv_t1_ifsd_request) refers to emv_core.o(i.emv_t1_block_xmit) for emv_t1_block_xmit
+    emv_core.o(i.emv_t1_ifsd_request) refers to emv_core.o(i.emv_t1_block_recv) for emv_t1_block_recv
+    emv_core.o(i.emv_t1_ifsd_request) refers to mhscpu_emv_hard.o(.text) for emv_hard_power_dump
+    emv_queue.o(i.emv_core_devs) refers to emv_queue.o(.data) for emv_devs
+    emv_queue.o(i.emv_core_register) refers to emv_queue.o(.data) for emv_devs
+    emv_queue.o(i.emv_queue_spill) refers to emv_queue.o(i.emv_queue_empty) for emv_queue_empty
+    emv_queue.o(i.emv_queue_spill) refers to emv_patch.o(i.adjust_timeout_type) for adjust_timeout_type
+    iso7816_3.o(i.Read_CardSlotInfo) refers to mhscpu_emv_hard.o(.text) for isvalid_channel
+    iso7816_3.o(i.Read_CardSlotInfo) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.Write_CardSlotInfo) refers to mhscpu_emv_hard.o(.text) for isvalid_channel
+    iso7816_3.o(i.Write_CardSlotInfo) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.iso7816_close) refers to mhscpu_emv_hard.o(.text) for isvalid_channel
+    iso7816_3.o(i.iso7816_close) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.iso7816_detect) refers to mhscpu_emv_hard.o(.text) for isvalid_channel
+    iso7816_3.o(i.iso7816_detect) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.iso7816_device_init) refers to memseta.o(.text) for __aeabi_memclr4
+    iso7816_3.o(i.iso7816_device_init) refers to iso7816_3.o(i.sci_getv) for sci_getv
+    iso7816_3.o(i.iso7816_device_init) refers to mhscpu_emv_hard.o(.text) for emv_hard_init
+    iso7816_3.o(i.iso7816_device_init) refers to emv_queue.o(i.emv_core_register) for emv_core_register
+    iso7816_3.o(i.iso7816_device_init) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.iso7816_exchange) refers to mhscpu_emv_hard.o(.text) for isvalid_channel
+    iso7816_3.o(i.iso7816_exchange) refers to memcpya.o(.text) for __aeabi_memcpy4
+    iso7816_3.o(i.iso7816_exchange) refers to memseta.o(.text) for __aeabi_memclr4
+    iso7816_3.o(i.iso7816_exchange) refers to emv_core.o(i.emv_t0_exchange) for emv_t0_exchange
+    iso7816_3.o(i.iso7816_exchange) refers to emv_core.o(i.emv_t1_exchange) for emv_t1_exchange
+    iso7816_3.o(i.iso7816_exchange) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.iso7816_init) refers to mhscpu_emv_hard.o(.text) for isvalid_channel
+    iso7816_3.o(i.iso7816_init) refers to emv_core.o(i.emv_atr_analyser) for emv_atr_analyser
+    iso7816_3.o(i.iso7816_init) refers to emv_core.o(i.emv_atr_parse) for emv_atr_parse
+    iso7816_3.o(i.iso7816_init) refers to emv_patch.o(i.iso_atr_parse) for iso_atr_parse
+    iso7816_3.o(i.iso7816_init) refers to emv_patch.o(i.iso_pps_procedure) for iso_pps_procedure
+    iso7816_3.o(i.iso7816_init) refers to emv_core.o(i.emv_t1_ifsd_request) for emv_t1_ifsd_request
+    iso7816_3.o(i.iso7816_init) refers to iso7816_3.o(.bss) for emv_devs
+    iso7816_3.o(i.sci_getv) refers to strcpy.o(.text) for strcpy
+    emv_fidi_table.o(i.di_const_index) refers to emv_fidi_table.o(.constdata) for DI
+    emv_fidi_table.o(i.di_const_table) refers to emv_fidi_table.o(.constdata) for DI
+    emv_fidi_table.o(i.fi_const_index) refers to emv_fidi_table.o(.constdata) for FI
+    emv_fidi_table.o(i.fi_const_table) refers to emv_fidi_table.o(.constdata) for FI
+    emv_patch.o(i.iso_atr_parse) refers to emv_fidi_table.o(i.fi_const_table) for fi_const_table
+    emv_patch.o(i.iso_atr_parse) refers to emv_fidi_table.o(i.di_const_table) for di_const_table
+    emv_patch.o(i.iso_condsel_procedure) refers to memseta.o(.text) for __aeabi_memclr4
+    emv_patch.o(i.iso_condsel_procedure) refers to mhscpu_emv_hard.o(.text) for emv_hard_power_pump
+    emv_patch.o(i.iso_condsel_procedure) refers to emv_core.o(i.emv_atr_analyser) for emv_atr_analyser
+    emv_patch.o(i.iso_condsel_procedure) refers to emv_patch.o(.constdata) for .constdata
+    emv_patch.o(i.iso_pps_procedure) refers to emv_fidi_table.o(i.fi_const_table) for fi_const_table
+    emv_patch.o(i.iso_pps_procedure) refers to emv_fidi_table.o(i.di_const_table) for di_const_table
+    emv_patch.o(i.iso_pps_procedure) refers to emv_queue.o(i.emv_queue_flush) for emv_queue_flush
+    emv_patch.o(i.iso_pps_procedure) refers to emv_queue.o(i.emv_queue_fill) for emv_queue_fill
+    emv_patch.o(i.iso_pps_procedure) refers to mhscpu_emv_hard.o(.text) for emv_hard_xmit
+    emv_patch.o(i.iso_pps_procedure) refers to emv_queue.o(i.emv_queue_spill) for emv_queue_spill
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to main.o(.text) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to main.o(.text) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to main.o(.text) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to main.o(.text) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to main.o(.text) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to main.o(.text) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to main.o(.text) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to main.o(.text) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to main.o(.text) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to main.o(.text) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to main.o(.text) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to main.o(.text) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to main.o(.text) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to main.o(.text) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to main.o(.text) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to main.o(.text) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to main.o(.text) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to main.o(.text) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to main.o(.text) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to main.o(.text) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to main.o(.text) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to main.o(.text) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to main.o(.text) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to main.o(.text) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to main.o(.text) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to main.o(.text) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to main.o(.text) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to main.o(.text) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to main.o(.text) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to main.o(.text) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to main.o(.text) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to main.o(.text) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to main.o(.text) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to main.o(.text) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to main.o(.text) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to main.o(.text) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to main.o(.text) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to main.o(.text) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to main.o(.text) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to main.o(.text) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to main.o(.text) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to main.o(.text) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to main.o(.text) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to main.o(.text) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_mhscpu.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_mhscpu.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.bss), (64 bytes).
+    Removing uart.o(.rev16_text), (4 bytes).
+    Removing uart.o(.revsh_text), (4 bytes).
+    Removing test_emv.o(.rev16_text), (4 bytes).
+    Removing test_emv.o(.revsh_text), (4 bytes).
+    Removing test_loopback.o(.rev16_text), (4 bytes).
+    Removing test_loopback.o(.revsh_text), (4 bytes).
+    Removing startup_mhscpu.o(HEAP), (8192 bytes).
+    Removing misc.o(.rev16_text), (4 bytes).
+    Removing misc.o(.revsh_text), (4 bytes).
+    Removing mhscpu_uart.o(.rev16_text), (4 bytes).
+    Removing mhscpu_uart.o(.revsh_text), (4 bytes).
+    Removing mhscpu_uart.o(.text), (956 bytes).
+    Removing mhscpu_sysctrl.o(.rev16_text), (4 bytes).
+    Removing mhscpu_sysctrl.o(.revsh_text), (4 bytes).
+    Removing mhscpu_gpio.o(.rev16_text), (4 bytes).
+    Removing mhscpu_gpio.o(.revsh_text), (4 bytes).
+    Removing mhscpu_emv_hard.o(.rev16_text), (4 bytes).
+    Removing mhscpu_emv_hard.o(.revsh_text), (4 bytes).
+    Removing system_mhscpu.o(.rev16_text), (4 bytes).
+    Removing system_mhscpu.o(.revsh_text), (4 bytes).
+    Removing emv_queue.o(i.emv_core_devs), (24 bytes).
+    Removing emv_queue.o(i.emv_queue_length), (54 bytes).
+    Removing iso7816_3.o(i.Read_CardSlotInfo), (48 bytes).
+    Removing iso7816_3.o(i.Write_CardSlotInfo), (64 bytes).
+    Removing iso7816_3.o(i.iso7816_close), (48 bytes).
+    Removing emv_fidi_table.o(i.di_const_index), (36 bytes).
+    Removing emv_fidi_table.o(i.fi_const_index), (40 bytes).
+    Removing emv_patch.o(i.iso_condsel_procedure), (116 bytes).
+    Removing emv_patch.o(.constdata), (16 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+38 unused section(s) (total 10804 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\..\..\..\Libraries\Device\MegaHunt\mhscpu\Source\ARM\startup_mhscpu.s 0x00000000   Number         0  startup_mhscpu.o ABSOLUTE
+    ..\..\..\..\..\Libraries\Device\MegaHunt\mhscpu\Source\system_mhscpu.c 0x00000000   Number         0  system_mhscpu.o ABSOLUTE
+    ..\..\..\..\..\Libraries\MHSCPU_Driver\src\mhscpu_emv_hard.c 0x00000000   Number         0  mhscpu_emv_hard.o ABSOLUTE
+    ..\..\..\..\..\Libraries\MHSCPU_Driver\src\mhscpu_gpio.c 0x00000000   Number         0  mhscpu_gpio.o ABSOLUTE
+    ..\..\..\..\..\Libraries\MHSCPU_Driver\src\mhscpu_sysctrl.c 0x00000000   Number         0  mhscpu_sysctrl.o ABSOLUTE
+    ..\..\..\..\..\Libraries\MHSCPU_Driver\src\misc.c 0x00000000   Number         0  misc.o ABSOLUTE
+    ..\..\.\..\..\..\Libraries\MHSCPU_Driver\src\mhscpu_uart.c 0x00000000   Number         0  mhscpu_uart.o ABSOLUTE
+    ..\..\User\emv_lib\emv_core.c            0x00000000   Number         0  emv_core.o ABSOLUTE
+    ..\..\User\emv_lib\emv_fidi_table.c      0x00000000   Number         0  emv_fidi_table.o ABSOLUTE
+    ..\..\User\emv_lib\emv_patch.c           0x00000000   Number         0  emv_patch.o ABSOLUTE
+    ..\..\User\emv_lib\emv_queue.c           0x00000000   Number         0  emv_queue.o ABSOLUTE
+    ..\..\User\emv_lib\iso7816_3.c           0x00000000   Number         0  iso7816_3.o ABSOLUTE
+    ..\..\User\main.c                        0x00000000   Number         0  main.o ABSOLUTE
+    ..\..\User\test_emv.c                    0x00000000   Number         0  test_emv.o ABSOLUTE
+    ..\..\User\test_loopback.c               0x00000000   Number         0  test_loopback.o ABSOLUTE
+    ..\..\User\uart.c                        0x00000000   Number         0  uart.o ABSOLUTE
+    ..\\..\\..\\..\\..\\Libraries\\Device\\MegaHunt\\mhscpu\\Source\\system_mhscpu.c 0x00000000   Number         0  system_mhscpu.o ABSOLUTE
+    ..\\..\\..\\..\\..\\Libraries\\MHSCPU_Driver\\src\\mhscpu_emv_hard.c 0x00000000   Number         0  mhscpu_emv_hard.o ABSOLUTE
+    ..\\..\\..\\..\\..\\Libraries\\MHSCPU_Driver\\src\\mhscpu_gpio.c 0x00000000   Number         0  mhscpu_gpio.o ABSOLUTE
+    ..\\..\\..\\..\\..\\Libraries\\MHSCPU_Driver\\src\\mhscpu_sysctrl.c 0x00000000   Number         0  mhscpu_sysctrl.o ABSOLUTE
+    ..\\..\\..\\..\\..\\Libraries\\MHSCPU_Driver\\src\\misc.c 0x00000000   Number         0  misc.o ABSOLUTE
+    ..\\..\\.\\..\\..\\..\\Libraries\\MHSCPU_Driver\\src\\mhscpu_uart.c 0x00000000   Number         0  mhscpu_uart.o ABSOLUTE
+    ..\\..\\User\\main.c                     0x00000000   Number         0  main.o ABSOLUTE
+    ..\\..\\User\\test_emv.c                 0x00000000   Number         0  test_emv.o ABSOLUTE
+    ..\\..\\User\\test_loopback.c            0x00000000   Number         0  test_loopback.o ABSOLUTE
+    ..\\..\\User\\uart.c                     0x00000000   Number         0  uart.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    RESET                                    0x01010000   Section      180  startup_mhscpu.o(RESET)
+    .ARM.Collect$$$$00000000                 0x010100b4   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x010100b4   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x010100b8   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x010100bc   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x010100bc   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x010100bc   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x010100c4   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x010100c4   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x010100c4   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x010100c4   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x010100c8   Section       24  mhscpu_sysctrl.o(.emb_text)
+    .text                                    0x010100e0   Section        0  main.o(.text)
+    .text                                    0x010102c4   Section        0  uart.o(.text)
+    uart_Resume                              0x010103bf   Thumb Code    76  uart.o(.text)
+    .text                                    0x0101081c   Section        0  test_emv.o(.text)
+    NVIC_DisableIRQ                          0x01010a0f   Thumb Code    18  test_emv.o(.text)
+    .text                                    0x01010a64   Section        0  test_loopback.o(.text)
+    .text                                    0x01010e34   Section       56  startup_mhscpu.o(.text)
+    .text                                    0x01010e6c   Section        0  misc.o(.text)
+    .text                                    0x01011030   Section        0  mhscpu_sysctrl.o(.text)
+    .text                                    0x010115c8   Section        0  mhscpu_gpio.o(.text)
+    GPIO_GetGPIONum                          0x010115c9   Thumb Code    82  mhscpu_gpio.o(.text)
+    .text                                    0x01011e8c   Section        0  mhscpu_emv_hard.o(.text)
+    SET_ERR                                  0x01011e8d   Thumb Code    94  mhscpu_emv_hard.o(.text)
+    FLUSH_QUEUE                              0x01011eeb   Thumb Code    64  mhscpu_emv_hard.o(.text)
+    SCIx_IRQHandler                          0x010124a1   Thumb Code  1078  mhscpu_emv_hard.o(.text)
+    .text                                    0x010129ec   Section        0  system_mhscpu.o(.text)
+    .text                                    0x01012a14   Section        0  memcpya.o(.text)
+    .text                                    0x01012a38   Section        0  memseta.o(.text)
+    .text                                    0x01012a5c   Section        0  strcpy.o(.text)
+    .text                                    0x01012a6e   Section        0  uldiv.o(.text)
+    .text                                    0x01012ad0   Section       36  init.o(.text)
+    .text                                    0x01012af4   Section        0  llshl.o(.text)
+    .text                                    0x01012b12   Section        0  llushr.o(.text)
+    i.__0printf$8                            0x01012b34   Section        0  printf8.o(i.__0printf$8)
+    i.__scatterload_copy                     0x01012b54   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x01012b62   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x01012b64   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x01012b74   Section        0  printf8.o(i._printf_core)
+    _printf_core                             0x01012b75   Thumb Code   996  printf8.o(i._printf_core)
+    i._printf_post_padding                   0x01012f84   Section        0  printf8.o(i._printf_post_padding)
+    _printf_post_padding                     0x01012f85   Thumb Code    36  printf8.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x01012fa8   Section        0  printf8.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x01012fa9   Thumb Code    46  printf8.o(i._printf_pre_padding)
+    i.adjust_timeout_type                    0x01012fd8   Section        0  emv_patch.o(i.adjust_timeout_type)
+    i.di_const_table                         0x01013078   Section        0  emv_fidi_table.o(i.di_const_table)
+    i.emv_atr_analyser                       0x01013088   Section        0  emv_core.o(i.emv_atr_analyser)
+    i.emv_atr_parse                          0x010132b0   Section        0  emv_core.o(i.emv_atr_parse)
+    i.emv_core_init                          0x01013538   Section        0  emv_queue.o(i.emv_core_init)
+    i.emv_core_register                      0x01013540   Section        0  emv_queue.o(i.emv_core_register)
+    i.emv_queue_empty                        0x01013558   Section        0  emv_queue.o(i.emv_queue_empty)
+    i.emv_queue_fill                         0x01013572   Section        0  emv_queue.o(i.emv_queue_fill)
+    i.emv_queue_flush                        0x010135b4   Section        0  emv_queue.o(i.emv_queue_flush)
+    i.emv_queue_spill                        0x010135d8   Section        0  emv_queue.o(i.emv_queue_spill)
+    i.emv_t0_exchange                        0x010136a0   Section        0  emv_core.o(i.emv_t0_exchange)
+    i.emv_t1_block_recv                      0x01013a24   Section        0  emv_core.o(i.emv_t1_block_recv)
+    i.emv_t1_block_xmit                      0x01013bcc   Section        0  emv_core.o(i.emv_t1_block_xmit)
+    i.emv_t1_compute_lrc                     0x01013c22   Section        0  emv_core.o(i.emv_t1_compute_lrc)
+    i.emv_t1_exchange                        0x01013c54   Section        0  emv_core.o(i.emv_t1_exchange)
+    i.emv_t1_extract                         0x01013fe4   Section        0  emv_core.o(i.emv_t1_extract)
+    i.emv_t1_iblock_pack                     0x0101409e   Section        0  emv_core.o(i.emv_t1_iblock_pack)
+    i.emv_t1_ifsd_request                    0x01014100   Section        0  emv_core.o(i.emv_t1_ifsd_request)
+    i.emv_tell_case                          0x010141c4   Section        0  emv_core.o(i.emv_tell_case)
+    i.fi_const_table                         0x010141e4   Section        0  emv_fidi_table.o(i.fi_const_table)
+    i.iso7816_detect                         0x010141f4   Section        0  iso7816_3.o(i.iso7816_detect)
+    i.iso7816_device_init                    0x01014260   Section        0  iso7816_3.o(i.iso7816_device_init)
+    i.iso7816_exchange                       0x01014340   Section        0  iso7816_3.o(i.iso7816_exchange)
+    i.iso7816_get_version                    0x01014450   Section        0  iso7816_3.o(i.iso7816_get_version)
+    i.iso7816_init                           0x01014458   Section        0  iso7816_3.o(i.iso7816_init)
+    i.iso7816_lib_date                       0x01014640   Section        0  iso7816_3.o(i.iso7816_lib_date)
+    i.iso7816_lib_time                       0x01014650   Section        0  iso7816_3.o(i.iso7816_lib_time)
+    i.iso_atr_parse                          0x01014660   Section        0  emv_patch.o(i.iso_atr_parse)
+    i.iso_pps_procedure                      0x010149a8   Section        0  emv_patch.o(i.iso_pps_procedure)
+    i.sci_getv                               0x01014bd4   Section        0  iso7816_3.o(i.sci_getv)
+    .constdata                               0x01014be8   Section       16  test_emv.o(.constdata)
+    aTIM_IRQn                                0x01014be8   Data          16  test_emv.o(.constdata)
+    .constdata                               0x01014bf8   Section       16  mhscpu_gpio.o(.constdata)
+    .constdata                               0x01014c08   Section       15  mhscpu_emv_hard.o(.constdata)
+    aSCI_BaseTable                           0x01014c08   Data          12  mhscpu_emv_hard.o(.constdata)
+    aSCI_CG_Table                            0x01014c14   Data           3  mhscpu_emv_hard.o(.constdata)
+    .constdata                               0x01014c18   Section      128  emv_fidi_table.o(.constdata)
+    .conststring                             0x01014c98   Section       78  test_emv.o(.conststring)
+    .data                                    0x20000000   Section       16  uart.o(.data)
+    uart_dll                                 0x20000008   Data           4  uart.o(.data)
+    err_count                                0x2000000c   Data           4  uart.o(.data)
+    .data                                    0x20000010   Section        8  mhscpu_gpio.o(.data)
+    GPIO_OD_Mark                             0x20000010   Data           8  mhscpu_gpio.o(.data)
+    .data                                    0x20000018   Section       12  mhscpu_emv_hard.o(.data)
+    gu32Di                                   0x20000020   Data           4  mhscpu_emv_hard.o(.data)
+    .data                                    0x20000024   Section        4  system_mhscpu.o(.data)
+    .data                                    0x20000028   Section        8  emv_queue.o(.data)
+    emv_devs                                 0x20000028   Data           4  emv_queue.o(.data)
+    emv_devs_nums                            0x2000002c   Data           4  emv_queue.o(.data)
+    .data                                    0x20000030   Section        4  stdout.o(.data)
+    .bss                                     0x20000034   Section     1332  uart.o(.bss)
+    .bss                                     0x20000568   Section     1108  test_loopback.o(.bss)
+    atr_buf                                  0x20000568   Data          64  test_loopback.o(.bss)
+    apdu_req                                 0x200005a8   Data         524  test_loopback.o(.bss)
+    apdu_rsp                                 0x200007b4   Data         520  test_loopback.o(.bss)
+    .bss                                     0x200009bc   Section     1680  mhscpu_emv_hard.o(.bss)
+    aEMV_Param                               0x20000fec   Data          96  mhscpu_emv_hard.o(.bss)
+    .bss                                     0x2000104c   Section      112  iso7816_3.o(.bss)
+    STACK                                    0x200010c0   Section    16384  startup_mhscpu.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$ENUMINT$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000000b4   Number         0  startup_mhscpu.o ABSOLUTE
+    __Vectors                                0x01010000   Data           4  startup_mhscpu.o(RESET)
+    __Vectors_End                            0x010100b4   Data           0  startup_mhscpu.o(RESET)
+    __main                                   0x010100b5   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x010100b5   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x010100b9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x010100bd   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x010100bd   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x010100bd   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x010100bd   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x010100c5   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x010100c5   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    __asm___16_mhscpu_sysctrl_c_220ebcab__SYSCTRL_Sleep 0x010100c9   Thumb Code    24  mhscpu_sysctrl.o(.emb_text)
+    NVIC_Configuration                       0x010100e1   Thumb Code    52  main.o(.text)
+    main                                     0x01010115   Thumb Code   262  main.o(.text)
+    assert_failed                            0x0101021b   Thumb Code     4  main.o(.text)
+    fputc                                    0x0101021f   Thumb Code    38  main.o(.text)
+    fgetc                                    0x01010245   Thumb Code    18  main.o(.text)
+    uart_Config                              0x010102c5   Thumb Code   250  uart.o(.text)
+    uart_IsSendFinish                        0x0101040b   Thumb Code    60  uart.o(.text)
+    uart_RecvFlush                           0x01010447   Thumb Code    78  uart.o(.text)
+    uart_SendChar                            0x01010495   Thumb Code   126  uart.o(.text)
+    uart_SendCharBlock                       0x01010513   Thumb Code   132  uart.o(.text)
+    uart_SendBuff                            0x01010597   Thumb Code   146  uart.o(.text)
+    uart_RecvChar                            0x01010629   Thumb Code   106  uart.o(.text)
+    UART0_IRQHandler                         0x01010693   Thumb Code   374  uart.o(.text)
+    print_hex                                0x0101081d   Thumb Code    44  test_emv.o(.text)
+    timer0_1_stop                            0x01010849   Thumb Code    42  test_emv.o(.text)
+    Timer0_0_IRQHandler                      0x01010873   Thumb Code    30  test_emv.o(.text)
+    timer0_1_IsTimeout                       0x01010891   Thumb Code    24  test_emv.o(.text)
+    timer0_1_start                           0x010108a9   Thumb Code   114  test_emv.o(.text)
+    delay_Ms                                 0x0101091b   Thumb Code    70  test_emv.o(.text)
+    wait_Ns                                  0x01010961   Thumb Code    44  test_emv.o(.text)
+    wait_ChangeNs                            0x0101098d   Thumb Code   130  test_emv.o(.text)
+    PsamColdRest                             0x01010a65   Thumb Code   200  test_loopback.o(.text)
+    ReadRandParm                             0x01010b2d   Thumb Code   130  test_loopback.o(.text)
+    loop_back                                0x01010baf   Thumb Code   222  test_loopback.o(.text)
+    Reset_Handler                            0x01010e35   Thumb Code    18  startup_mhscpu.o(.text)
+    NMI_Handler                              0x01010e49   Thumb Code     2  startup_mhscpu.o(.text)
+    HardFault_Handler                        0x01010e4b   Thumb Code     2  startup_mhscpu.o(.text)
+    MemManage_Handler                        0x01010e4d   Thumb Code     2  startup_mhscpu.o(.text)
+    BusFault_Handler                         0x01010e4f   Thumb Code     2  startup_mhscpu.o(.text)
+    UsageFault_Handler                       0x01010e51   Thumb Code     2  startup_mhscpu.o(.text)
+    SVC_Handler                              0x01010e53   Thumb Code     2  startup_mhscpu.o(.text)
+    DebugMon_Handler                         0x01010e55   Thumb Code     2  startup_mhscpu.o(.text)
+    PendSV_Handler                           0x01010e57   Thumb Code     2  startup_mhscpu.o(.text)
+    SysTick_Handler                          0x01010e59   Thumb Code     2  startup_mhscpu.o(.text)
+    ADC0_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    CRYPT0_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    DCMI_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    DMA0_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    EXTI0_IRQHandler                         0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    EXTI1_IRQHandler                         0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    EXTI2_IRQHandler                         0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    EXTI3_IRQHandler                         0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    IMG_COP_IRQHandler                       0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    LCD_IRQHandler                           0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    MSR_IRQHandler                           0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    RTC_IRQHandler                           0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    SENSOR_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    SPI0_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    SPI1_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    SPI2_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    SSC_IRQHandler                           0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TIM0_0_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TIM0_1_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TIM0_2_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TIM0_3_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TIM0_4_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TIM0_5_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    TRNG_IRQHandler                          0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    UART1_IRQHandler                         0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    USBDMA_IRQHandler                        0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    USB_IRQHandler                           0x01010e5b   Thumb Code     0  startup_mhscpu.o(.text)
+    NVIC_Init                                0x01010e6d   Thumb Code   258  misc.o(.text)
+    NVIC_SetVectorTable                      0x01010f6f   Thumb Code    60  misc.o(.text)
+    SysTick_CLKSourceConfig                  0x01010fab   Thumb Code    62  misc.o(.text)
+    SYSCTRL_AHBPeriphClockCmd                0x01011031   Thumb Code    66  mhscpu_sysctrl.o(.text)
+    SYSCTRL_APBPeriphClockCmd                0x01011073   Thumb Code    66  mhscpu_sysctrl.o(.text)
+    SYSCTRL_AHBPeriphResetCmd                0x010110b5   Thumb Code    92  mhscpu_sysctrl.o(.text)
+    SYSCTRL_APBPeriphResetCmd                0x01011111   Thumb Code    66  mhscpu_sysctrl.o(.text)
+    SYSCTRL_EnterSleep                       0x01011153   Thumb Code    92  mhscpu_sysctrl.o(.text)
+    SYSCTRL_GetWakeupFlag1Status             0x010111af   Thumb Code    10  mhscpu_sysctrl.o(.text)
+    SYSCTRL_GetWakeupFlag2Status             0x010111b9   Thumb Code    12  mhscpu_sysctrl.o(.text)
+    SYSCTRL_SYSCLKSourceSelect               0x010111c5   Thumb Code    62  mhscpu_sysctrl.o(.text)
+    SYSCTRL_PLLConfig                        0x01011203   Thumb Code    82  mhscpu_sysctrl.o(.text)
+    SYSCTRL_HCLKConfig                       0x01011255   Thumb Code   130  mhscpu_sysctrl.o(.text)
+    SYSCTRL_PCLKConfig                       0x010112d7   Thumb Code    78  mhscpu_sysctrl.o(.text)
+    SYSCTRL_GetClocksFreq                    0x01011325   Thumb Code    54  mhscpu_sysctrl.o(.text)
+    SYSCTRL_DMA_ChannelConfig                0x0101135b   Thumb Code   408  mhscpu_sysctrl.o(.text)
+    SYSCTRL_SPI_Reset                        0x010114f3   Thumb Code    66  mhscpu_sysctrl.o(.text)
+    SYSCTRL_SPI_MasterSlaveModeSet           0x01011535   Thumb Code    86  mhscpu_sysctrl.o(.text)
+    SYSCTRL_UART_Reset                       0x0101158b   Thumb Code    42  mhscpu_sysctrl.o(.text)
+    GPIO_DeInit                              0x0101161b   Thumb Code    12  mhscpu_gpio.o(.text)
+    GPIO_PinRemapConfig                      0x01011627   Thumb Code   248  mhscpu_gpio.o(.text)
+    GPIO_Init                                0x0101171f   Thumb Code   324  mhscpu_gpio.o(.text)
+    GPIO_StructInit                          0x01011863   Thumb Code    14  mhscpu_gpio.o(.text)
+    GPIO_ReadInputDataBit                    0x01011871   Thumb Code   156  mhscpu_gpio.o(.text)
+    GPIO_ReadInputData                       0x0101190d   Thumb Code    14  mhscpu_gpio.o(.text)
+    GPIO_ReadOutputDataBit                   0x0101191b   Thumb Code   232  mhscpu_gpio.o(.text)
+    GPIO_ReadOutputData                      0x01011a03   Thumb Code     8  mhscpu_gpio.o(.text)
+    GPIO_SetBits                             0x01011a0b   Thumb Code   206  mhscpu_gpio.o(.text)
+    GPIO_ResetBits                           0x01011ad9   Thumb Code   212  mhscpu_gpio.o(.text)
+    GPIO_WriteBit                            0x01011bad   Thumb Code   172  mhscpu_gpio.o(.text)
+    GPIO_Write                               0x01011c59   Thumb Code   154  mhscpu_gpio.o(.text)
+    GPIO_PullUpCmd                           0x01011cf3   Thumb Code    92  mhscpu_gpio.o(.text)
+    GPIO_WakeEvenDeInit                      0x01011d4f   Thumb Code    10  mhscpu_gpio.o(.text)
+    GPIO_WakeEvenConfig                      0x01011d59   Thumb Code   254  mhscpu_gpio.o(.text)
+    GPIO_WakeModeConfig                      0x01011e57   Thumb Code    44  mhscpu_gpio.o(.text)
+    isvalid_channel                          0x01011f2b   Thumb Code    14  mhscpu_emv_hard.o(.text)
+    emv_sci_reset                            0x01011f39   Thumb Code   108  mhscpu_emv_hard.o(.text)
+    select_slot                              0x01011fa5   Thumb Code    22  mhscpu_emv_hard.o(.text)
+    check_dev                                0x01011fbb   Thumb Code    42  mhscpu_emv_hard.o(.text)
+    SCI_ConfigEMV                            0x01011fe5   Thumb Code   172  mhscpu_emv_hard.o(.text)
+    SCI_MatchBaudReg                         0x01012091   Thumb Code   112  mhscpu_emv_hard.o(.text)
+    emv_disturb_interruption                 0x01012101   Thumb Code     6  mhscpu_emv_hard.o(.text)
+    emv_hard_init                            0x01012107   Thumb Code     4  mhscpu_emv_hard.o(.text)
+    emv_hard_config                          0x0101210b   Thumb Code    68  mhscpu_emv_hard.o(.text)
+    emv_hard_detect                          0x0101214f   Thumb Code    40  mhscpu_emv_hard.o(.text)
+    emv_hard_cold_reset                      0x01012177   Thumb Code   244  mhscpu_emv_hard.o(.text)
+    emv_hard_warm_reset                      0x0101226b   Thumb Code   276  mhscpu_emv_hard.o(.text)
+    emv_hard_power_dump                      0x0101237f   Thumb Code   116  mhscpu_emv_hard.o(.text)
+    emv_hard_power_pump                      0x010123f3   Thumb Code   174  mhscpu_emv_hard.o(.text)
+    SCI0_IRQHandler                          0x010128d7   Thumb Code    10  mhscpu_emv_hard.o(.text)
+    SCI1_IRQHandler                          0x010128e1   Thumb Code    10  mhscpu_emv_hard.o(.text)
+    emv_hard_xmit                            0x010128eb   Thumb Code   236  mhscpu_emv_hard.o(.text)
+    SystemCoreClockUpdate                    0x010129ed   Thumb Code     8  system_mhscpu.o(.text)
+    SystemInit                               0x010129f5   Thumb Code    22  system_mhscpu.o(.text)
+    __aeabi_memcpy                           0x01012a15   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x01012a15   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x01012a15   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x01012a39   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x01012a39   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x01012a39   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x01012a47   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x01012a47   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x01012a47   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x01012a4b   Thumb Code    18  memseta.o(.text)
+    strcpy                                   0x01012a5d   Thumb Code    18  strcpy.o(.text)
+    __aeabi_uldivmod                         0x01012a6f   Thumb Code    98  uldiv.o(.text)
+    __scatterload                            0x01012ad1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x01012ad1   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x01012af5   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x01012af5   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x01012b13   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x01012b13   Thumb Code     0  llushr.o(.text)
+    __0printf$8                              0x01012b35   Thumb Code    22  printf8.o(i.__0printf$8)
+    __1printf$8                              0x01012b35   Thumb Code     0  printf8.o(i.__0printf$8)
+    __2printf                                0x01012b35   Thumb Code     0  printf8.o(i.__0printf$8)
+    __scatterload_copy                       0x01012b55   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x01012b63   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x01012b65   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    adjust_timeout_type                      0x01012fd9   Thumb Code   154  emv_patch.o(i.adjust_timeout_type)
+    di_const_table                           0x01013079   Thumb Code    10  emv_fidi_table.o(i.di_const_table)
+    emv_atr_analyser                         0x01013089   Thumb Code   548  emv_core.o(i.emv_atr_analyser)
+    emv_atr_parse                            0x010132b1   Thumb Code   644  emv_core.o(i.emv_atr_parse)
+    emv_core_init                            0x01013539   Thumb Code     8  emv_queue.o(i.emv_core_init)
+    emv_core_register                        0x01013541   Thumb Code    14  emv_queue.o(i.emv_core_register)
+    emv_queue_empty                          0x01013559   Thumb Code    26  emv_queue.o(i.emv_queue_empty)
+    emv_queue_fill                           0x01013573   Thumb Code    66  emv_queue.o(i.emv_queue_fill)
+    emv_queue_flush                          0x010135b5   Thumb Code    34  emv_queue.o(i.emv_queue_flush)
+    emv_queue_spill                          0x010135d9   Thumb Code   194  emv_queue.o(i.emv_queue_spill)
+    emv_t0_exchange                          0x010136a1   Thumb Code   888  emv_core.o(i.emv_t0_exchange)
+    emv_t1_block_recv                        0x01013a25   Thumb Code   420  emv_core.o(i.emv_t1_block_recv)
+    emv_t1_block_xmit                        0x01013bcd   Thumb Code    86  emv_core.o(i.emv_t1_block_xmit)
+    emv_t1_compute_lrc                       0x01013c23   Thumb Code    48  emv_core.o(i.emv_t1_compute_lrc)
+    emv_t1_exchange                          0x01013c55   Thumb Code   906  emv_core.o(i.emv_t1_exchange)
+    emv_t1_extract                           0x01013fe5   Thumb Code   186  emv_core.o(i.emv_t1_extract)
+    emv_t1_iblock_pack                       0x0101409f   Thumb Code    98  emv_core.o(i.emv_t1_iblock_pack)
+    emv_t1_ifsd_request                      0x01014101   Thumb Code   190  emv_core.o(i.emv_t1_ifsd_request)
+    emv_tell_case                            0x010141c5   Thumb Code    32  emv_core.o(i.emv_tell_case)
+    fi_const_table                           0x010141e5   Thumb Code    10  emv_fidi_table.o(i.fi_const_table)
+    iso7816_detect                           0x010141f5   Thumb Code   100  iso7816_3.o(i.iso7816_detect)
+    iso7816_device_init                      0x01014261   Thumb Code   220  iso7816_3.o(i.iso7816_device_init)
+    iso7816_exchange                         0x01014341   Thumb Code   262  iso7816_3.o(i.iso7816_exchange)
+    iso7816_get_version                      0x01014451   Thumb Code     4  iso7816_3.o(i.iso7816_get_version)
+    iso7816_init                             0x01014459   Thumb Code   480  iso7816_3.o(i.iso7816_init)
+    iso7816_lib_date                         0x01014641   Thumb Code     4  iso7816_3.o(i.iso7816_lib_date)
+    iso7816_lib_time                         0x01014651   Thumb Code     4  iso7816_3.o(i.iso7816_lib_time)
+    iso_atr_parse                            0x01014661   Thumb Code   836  emv_patch.o(i.iso_atr_parse)
+    iso_pps_procedure                        0x010149a9   Thumb Code   546  emv_patch.o(i.iso_pps_procedure)
+    sci_getv                                 0x01014bd5   Thumb Code    14  iso7816_3.o(i.sci_getv)
+    FI                                       0x01014c18   Data          64  emv_fidi_table.o(.constdata)
+    DI                                       0x01014c58   Data          64  emv_fidi_table.o(.constdata)
+    Region$$Table$$Base                      0x01014ce8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x01014cf8   Number         0  anon$$obj.o(Region$$Table)
+    uart_SendBuf                             0x20000000   Data           4  uart.o(.data)
+    uart_RecvBuf                             0x20000004   Data           4  uart.o(.data)
+    user_dev                                 0x20000018   Data           4  mhscpu_emv_hard.o(.data)
+    soft_dev                                 0x2000001c   Data           4  mhscpu_emv_hard.o(.data)
+    SystemCoreClock                          0x20000024   Data           4  system_mhscpu.o(.data)
+    __stdout                                 0x20000030   Data           4  stdout.o(.data)
+    au8SendBuff                              0x20000034   Data        1050  uart.o(.bss)
+    au8RecvBuff                              0x2000044e   Data         282  uart.o(.bss)
+    scs_queue                                0x200009bc   Data        1584  mhscpu_emv_hard.o(.bss)
+    emv_devs                                 0x2000104c   Data         112  iso7816_3.o(.bss)
+    __initial_sp                             0x200050c0   Data           0  startup_mhscpu.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x010100b5
+
+  Load Region LR_IROM1 (Base: 0x01010000, Size: 0x00004d2c, Max: 0x0000f000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x01010000, Load base: 0x01010000, Size: 0x00004cf8, Max: 0x0000f000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x01010000   0x01010000   0x000000b4   Data   RO          306    RESET               startup_mhscpu.o
+    0x010100b4   0x010100b4   0x00000000   Code   RO          778  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x010100b4   0x010100b4   0x00000004   Code   RO         1050    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x010100b8   0x010100b8   0x00000004   Code   RO         1053    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x010100bc   0x010100bc   0x00000000   Code   RO         1055    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x010100bc   0x010100bc   0x00000000   Code   RO         1057    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x010100bc   0x010100bc   0x00000008   Code   RO         1058    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x010100c4   0x010100c4   0x00000000   Code   RO         1060    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x010100c4   0x010100c4   0x00000000   Code   RO         1062    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x010100c4   0x010100c4   0x00000004   Code   RO         1051    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x010100c8   0x010100c8   0x00000018   Code   RO          361    .emb_text           mhscpu_sysctrl.o
+    0x010100e0   0x010100e0   0x000001e4   Code   RO            3    .text               main.o
+    0x010102c4   0x010102c4   0x00000558   Code   RO          136    .text               uart.o
+    0x0101081c   0x0101081c   0x00000248   Code   RO          235    .text               test_emv.o
+    0x01010a64   0x01010a64   0x000003d0   Code   RO          269    .text               test_loopback.o
+    0x01010e34   0x01010e34   0x00000038   Code   RO          307    .text               startup_mhscpu.o
+    0x01010e6c   0x01010e6c   0x000001c4   Code   RO          313    .text               misc.o
+    0x01011030   0x01011030   0x00000598   Code   RO          362    .text               mhscpu_sysctrl.o
+    0x010115c8   0x010115c8   0x000008c4   Code   RO          388    .text               mhscpu_gpio.o
+    0x01011e8c   0x01011e8c   0x00000b60   Code   RO          411    .text               mhscpu_emv_hard.o
+    0x010129ec   0x010129ec   0x00000028   Code   RO          454    .text               system_mhscpu.o
+    0x01012a14   0x01012a14   0x00000024   Code   RO          781    .text               mc_w.l(memcpya.o)
+    0x01012a38   0x01012a38   0x00000024   Code   RO          783    .text               mc_w.l(memseta.o)
+    0x01012a5c   0x01012a5c   0x00000012   Code   RO          785    .text               mc_w.l(strcpy.o)
+    0x01012a6e   0x01012a6e   0x00000062   Code   RO         1067    .text               mc_w.l(uldiv.o)
+    0x01012ad0   0x01012ad0   0x00000024   Code   RO         1080    .text               mc_w.l(init.o)
+    0x01012af4   0x01012af4   0x0000001e   Code   RO         1082    .text               mc_w.l(llshl.o)
+    0x01012b12   0x01012b12   0x00000020   Code   RO         1084    .text               mc_w.l(llushr.o)
+    0x01012b32   0x01012b32   0x00000002   PAD
+    0x01012b34   0x01012b34   0x00000020   Code   RO          996    i.__0printf$8       mc_w.l(printf8.o)
+    0x01012b54   0x01012b54   0x0000000e   Code   RO         1092    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x01012b62   0x01012b62   0x00000002   Code   RO         1093    i.__scatterload_null  mc_w.l(handlers.o)
+    0x01012b64   0x01012b64   0x0000000e   Code   RO         1094    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x01012b72   0x01012b72   0x00000002   PAD
+    0x01012b74   0x01012b74   0x00000410   Code   RO         1003    i._printf_core      mc_w.l(printf8.o)
+    0x01012f84   0x01012f84   0x00000024   Code   RO         1004    i._printf_post_padding  mc_w.l(printf8.o)
+    0x01012fa8   0x01012fa8   0x0000002e   Code   RO         1005    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x01012fd6   0x01012fd6   0x00000002   PAD
+    0x01012fd8   0x01012fd8   0x000000a0   Code   RO          747    i.adjust_timeout_type  mh1902_emv.lib(emv_patch.o)
+    0x01013078   0x01013078   0x00000010   Code   RO          715    i.di_const_table    mh1902_emv.lib(emv_fidi_table.o)
+    0x01013088   0x01013088   0x00000228   Code   RO          478    i.emv_atr_analyser  mh1902_emv.lib(emv_core.o)
+    0x010132b0   0x010132b0   0x00000288   Code   RO          479    i.emv_atr_parse     mh1902_emv.lib(emv_core.o)
+    0x01013538   0x01013538   0x00000008   Code   RO          572    i.emv_core_init     mh1902_emv.lib(emv_queue.o)
+    0x01013540   0x01013540   0x00000018   Code   RO          573    i.emv_core_register  mh1902_emv.lib(emv_queue.o)
+    0x01013558   0x01013558   0x0000001a   Code   RO          574    i.emv_queue_empty   mh1902_emv.lib(emv_queue.o)
+    0x01013572   0x01013572   0x00000042   Code   RO          575    i.emv_queue_fill    mh1902_emv.lib(emv_queue.o)
+    0x010135b4   0x010135b4   0x00000022   Code   RO          576    i.emv_queue_flush   mh1902_emv.lib(emv_queue.o)
+    0x010135d6   0x010135d6   0x00000002   PAD
+    0x010135d8   0x010135d8   0x000000c8   Code   RO          578    i.emv_queue_spill   mh1902_emv.lib(emv_queue.o)
+    0x010136a0   0x010136a0   0x00000384   Code   RO          480    i.emv_t0_exchange   mh1902_emv.lib(emv_core.o)
+    0x01013a24   0x01013a24   0x000001a8   Code   RO          481    i.emv_t1_block_recv  mh1902_emv.lib(emv_core.o)
+    0x01013bcc   0x01013bcc   0x00000056   Code   RO          482    i.emv_t1_block_xmit  mh1902_emv.lib(emv_core.o)
+    0x01013c22   0x01013c22   0x00000030   Code   RO          483    i.emv_t1_compute_lrc  mh1902_emv.lib(emv_core.o)
+    0x01013c52   0x01013c52   0x00000002   PAD
+    0x01013c54   0x01013c54   0x00000390   Code   RO          484    i.emv_t1_exchange   mh1902_emv.lib(emv_core.o)
+    0x01013fe4   0x01013fe4   0x000000ba   Code   RO          485    i.emv_t1_extract    mh1902_emv.lib(emv_core.o)
+    0x0101409e   0x0101409e   0x00000062   Code   RO          486    i.emv_t1_iblock_pack  mh1902_emv.lib(emv_core.o)
+    0x01014100   0x01014100   0x000000c4   Code   RO          487    i.emv_t1_ifsd_request  mh1902_emv.lib(emv_core.o)
+    0x010141c4   0x010141c4   0x00000020   Code   RO          488    i.emv_tell_case     mh1902_emv.lib(emv_core.o)
+    0x010141e4   0x010141e4   0x00000010   Code   RO          717    i.fi_const_table    mh1902_emv.lib(emv_fidi_table.o)
+    0x010141f4   0x010141f4   0x0000006c   Code   RO          630    i.iso7816_detect    mh1902_emv.lib(iso7816_3.o)
+    0x01014260   0x01014260   0x000000e0   Code   RO          631    i.iso7816_device_init  mh1902_emv.lib(iso7816_3.o)
+    0x01014340   0x01014340   0x00000110   Code   RO          632    i.iso7816_exchange  mh1902_emv.lib(iso7816_3.o)
+    0x01014450   0x01014450   0x00000008   Code   RO          633    i.iso7816_get_version  mh1902_emv.lib(iso7816_3.o)
+    0x01014458   0x01014458   0x000001e8   Code   RO          634    i.iso7816_init      mh1902_emv.lib(iso7816_3.o)
+    0x01014640   0x01014640   0x00000010   Code   RO          635    i.iso7816_lib_date  mh1902_emv.lib(iso7816_3.o)
+    0x01014650   0x01014650   0x00000010   Code   RO          636    i.iso7816_lib_time  mh1902_emv.lib(iso7816_3.o)
+    0x01014660   0x01014660   0x00000348   Code   RO          748    i.iso_atr_parse     mh1902_emv.lib(emv_patch.o)
+    0x010149a8   0x010149a8   0x0000022c   Code   RO          750    i.iso_pps_procedure  mh1902_emv.lib(emv_patch.o)
+    0x01014bd4   0x01014bd4   0x00000014   Code   RO          637    i.sci_getv          mh1902_emv.lib(iso7816_3.o)
+    0x01014be8   0x01014be8   0x00000010   Data   RO          236    .constdata          test_emv.o
+    0x01014bf8   0x01014bf8   0x00000010   Data   RO          389    .constdata          mhscpu_gpio.o
+    0x01014c08   0x01014c08   0x0000000f   Data   RO          413    .constdata          mhscpu_emv_hard.o
+    0x01014c17   0x01014c17   0x00000001   PAD
+    0x01014c18   0x01014c18   0x00000080   Data   RO          718    .constdata          mh1902_emv.lib(emv_fidi_table.o)
+    0x01014c98   0x01014c98   0x0000004e   Data   RO          237    .conststring        test_emv.o
+    0x01014ce6   0x01014ce6   0x00000002   PAD
+    0x01014ce8   0x01014ce8   0x00000010   Data   RO         1090    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x01014cf8, Size: 0x000050c0, Max: 0x0000a000, ABSOLUTE, UNINIT)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x01014cf8   0x00000010   Data   RW          138    .data               uart.o
+    0x20000010   0x01014d08   0x00000008   Data   RW          390    .data               mhscpu_gpio.o
+    0x20000018   0x01014d10   0x0000000c   Data   RW          414    .data               mhscpu_emv_hard.o
+    0x20000024   0x01014d1c   0x00000004   Data   RW          455    .data               system_mhscpu.o
+    0x20000028   0x01014d20   0x00000008   Data   RW          579    .data               mh1902_emv.lib(emv_queue.o)
+    0x20000030   0x01014d28   0x00000004   Data   RW         1064    .data               mc_w.l(stdout.o)
+    0x20000034        -       0x00000534   Zero   RW          137    .bss                uart.o
+    0x20000568        -       0x00000454   Zero   RW          270    .bss                test_loopback.o
+    0x200009bc        -       0x00000690   Zero   RW          412    .bss                mhscpu_emv_hard.o
+    0x2000104c        -       0x00000070   Zero   RW          638    .bss                mh1902_emv.lib(iso7816_3.o)
+    0x200010bc   0x01014d2c   0x00000004   PAD
+    0x200010c0        -       0x00004000   Zero   RW          304    STACK               startup_mhscpu.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       484        110          0          0          0      65838   main.o
+      2912         78         15         12       1680      12264   mhscpu_emv_hard.o
+      2244        104         16          8          0       6536   mhscpu_gpio.o
+      1456        124          0          0          0       7330   mhscpu_sysctrl.o
+       452         72          0          0          0      25987   misc.o
+        56         18        180          0      16384        932   startup_mhscpu.o
+        40         10          0          4          0       1061   system_mhscpu.o
+       584         68         94          0          0      26930   test_emv.o
+       976        424          0          0       1108       2533   test_loopback.o
+      1368         56          0         16       1332      64624   uart.o
+
+    ----------------------------------------------------------------------
+     10572       1064        324         40      20504     214035   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         0          0          3          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        30          0          0          0          0         68   llshl.o
+        32          0          0          0          0         68   llushr.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+      1154         54          0          0          0        352   printf8.o
+         0          0          0          4          0          0   stdout.o
+        18          0          0          0          0         68   strcpy.o
+        98          0          0          0          0         92   uldiv.o
+      4082         58          0          0          0      14364   emv_core.o
+        32         12        128          0          0       1658   emv_fidi_table.o
+      1556         28          0          0          0       3818   emv_patch.o
+       358         16          0          8          0       4447   emv_queue.o
+      1152         64          0          0        112       7819   iso7816_3.o
+
+    ----------------------------------------------------------------------
+      8680        248        128         12        116      32998   Library Totals
+        10          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1490         70          0          4          0        892   mc_w.l
+      7180        178        128          8        112      32106   mh1902_emv.lib
+
+    ----------------------------------------------------------------------
+      8680        248        128         12        116      32998   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     19252       1312        452         52      20620     244221   Grand Totals
+     19252       1312        452         52      20620     244221   ELF Image Totals
+     19252       1312        452         52          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                19704 (  19.24kB)
+    Total RW  Size (RW Data + ZI Data)             20672 (  20.19kB)
+    Total ROM Size (Code + RO Data + RW Data)      19756 (  19.29kB)
+
+==============================================================================
+
